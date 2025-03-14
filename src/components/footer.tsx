@@ -54,7 +54,7 @@ export default function Footer() {
           {/* Column 3 */}
           <div className="flex flex-col gap-2">
             <h4 className="font-bold text-lg mb-2">Support & Help</h4>
-            <a href="#" className="text-gray-200 hover:text-primary transition-colors">Open Support Ticket</a>
+            <a href="#" className="text-blue-600 hover:text-primary transition-colors">Open Support Ticket</a>
             <a href="#" className="text-gray-200 hover:text-primary transition-colors">Terms of Use</a>
             <a href="#" className="text-gray-200 hover:text-primary transition-colors">About</a>
           </div>
