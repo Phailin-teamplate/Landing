@@ -13,7 +13,6 @@ export default function Contactus() {
 
   const whatsappNumber = "+85620 98270483"; // Replace with your WhatsApp number
   const whatsappLink = `https://wa.me/${2098270483}`;
-
   const [copied, setCopied] = useState(false);
 
   const handleCopy = () => {

@@ -10,7 +10,7 @@ export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <div className="w-full sticky top-0 z-50 bg-white shadow-md">
+    <div className="w-full sticky top-0 z-50 bg-white shadow-md ">
       <nav className="flex items-center justify-between p-6">
         {/* Logo */}
         <button className="p-0 border-none bg-transparent active:opacity-80">
