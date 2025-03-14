@@ -9,7 +9,7 @@ import {
 
 export default function Footer() {
   return (
-    <footer className={cn("bg-gray-800 text-white py-8 px-4")}>
+    <footer className={cn("bg-gradient-to-r from-blue-500 to-indigo-600 text-white py-8 px-4")}>
       <div className="container mx-auto flex flex-col md:flex-row justify-between items-center md:items-center gap-8 md:gap-12">
         {/* Left Section */}
         <div className="text-center md:text-left flex flex-col items-center md:items-start gap-4">
@@ -18,16 +18,16 @@ export default function Footer() {
 
           {/* Social Icons */}
           <div className="flex gap-4">
-            <a href="#" className="text-gray-400 hover:text-primary transition-colors text-lg">
+            <a href="#" className="text-white hover:text-primary transition-colors text-lg">
               <FaFacebookF />
             </a>
-            <a href="#" className="text-gray-400 hover:text-primary transition-colors text-lg">
+            <a href="#" className="text-white hover:text-primary transition-colors text-lg">
               <FaXTwitter />
             </a>
-            <a href="#" className="text-gray-400 hover:text-primary transition-colors text-lg">
+            <a href="#" className="text-white hover:text-primary transition-colors text-lg">
               <FaLinkedinIn />
             </a>
-            <a href="#" className="text-gray-400 hover:text-primary transition-colors text-lg">
+            <a href="#" className="text-white hover:text-primary transition-colors text-lg">
               <FaWhatsapp />
             </a>
           </div>
@@ -38,25 +38,25 @@ export default function Footer() {
           {/* Column 1 */}
           <div className="flex flex-col gap-2">
             <h4 className="font-bold text-lg mb-2">Useful Links</h4>
-            <a href="#" className="text-gray-400 hover:text-primary transition-colors">Blog</a>
-            <a href="#" className="text-gray-400 hover:text-primary transition-colors">Pricing</a>
-            <a href="#" className="text-gray-400 hover:text-primary transition-colors">About</a>
+            <a href="#" className="text-gray-200 hover:text-primary transition-colors">Blog</a>
+            <a href="#" className="text-gray-200 hover:text-primary transition-colors">Pricing</a>
+            <a href="#" className="text-gray-200 hover:text-primary transition-colors">About</a>
           </div>
 
           {/* Column 2 */}
           <div className="flex flex-col gap-2">
             <h4 className="font-bold text-lg mb-2">Terms</h4>
-            <a href="#" className="text-gray-400 hover:text-primary transition-colors">TOS</a>
-            <a href="#" className="text-gray-400 hover:text-primary transition-colors">Privacy Policy</a>
-            <a href="#" className="text-gray-400 hover:text-primary transition-colors">Refund Policy</a>
+            <a href="#" className="text-gray-200 hover:text-primary transition-colors">TOS</a>
+            <a href="#" className="text-gray-200 hover:text-primary transition-colors">Privacy Policy</a>
+            <a href="#" className="text-gray-200 hover:text-primary transition-colors">Refund Policy</a>
           </div>
 
           {/* Column 3 */}
           <div className="flex flex-col gap-2">
             <h4 className="font-bold text-lg mb-2">Support & Help</h4>
-            <a href="#" className="text-gray-400 hover:text-primary transition-colors">Open Support Ticket</a>
-            <a href="#" className="text-gray-400 hover:text-primary transition-colors">Terms of Use</a>
-            <a href="#" className="text-gray-400 hover:text-primary transition-colors">About</a>
+            <a href="#" className="text-gray-200 hover:text-primary transition-colors">Open Support Ticket</a>
+            <a href="#" className="text-gray-200 hover:text-primary transition-colors">Terms of Use</a>
+            <a href="#" className="text-gray-200 hover:text-primary transition-colors">About</a>
           </div>
         </div>
       </div>

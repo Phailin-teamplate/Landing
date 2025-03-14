@@ -139,7 +139,7 @@ export default function Contactus() {
         </span>
         .
       </p>
-      <Button className="mt-6 px-10 py-6 text-white bg-blue-600 hover:bg-blue-700 rounded-lg shadow-md transition-all font-bold text-lg">
+      <Button className="mt-6 px-10 py-6 text-white bg-gradient-to-r from-blue-500 to-indigo-600 hover:bg-blue-700 rounded-lg shadow-md transition-all font-bold text-lg">
         Contact Us
       </Button>
     </div>
