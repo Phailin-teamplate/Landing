@@ -34,7 +34,7 @@ export default function Footer() {
         </div>
 
         {/* Right Section (Links) */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 text-center md:text-left">
+        <div className="flex sm:grid-cols-1 md:grid-cols-3 md:gap-16 gap-6 text-center md:text-left">
           {/* Column 1 */}
           <div className="flex flex-col gap-2">
             <h4 className="font-bold text-lg mb-2">Useful Links</h4>

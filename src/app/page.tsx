@@ -168,7 +168,7 @@ export default function Home() {
               Crafted for App, Software, and SaaS Sites
             </p>
             <h1 className="text-black text-4xl md:text-6xl font-bold mb-6 md:mb-8">
-              Next.js Template and SaaS Starter Kit
+            Download Appline Now & Get started for free.
             </h1>
             <p className="text-lg sm:text-xl text-gray-600 mb-6 md:mb-8">
               Website template and starter kit crafted to build fully functional
