@@ -17,7 +17,7 @@ export default function Contactus() {
   const [copied, setCopied] = useState(false);
 
   const handleCopy = () => {
-    const text = "IT Center, Lao Youth Union";
+    const text = "contact@teamplate.dev";
     navigator.clipboard.writeText(text).then(() => {
       setCopied(true);
       setTimeout(() => setCopied(false), 1500); // Reset after 1.5 seconds
