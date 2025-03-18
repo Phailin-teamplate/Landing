@@ -1,5 +1,3 @@
-"use client"; // Marks this as a Client Component
-
 import { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
@@ -27,24 +25,23 @@ export default function Navbar() {
           <Link href="/" className="hover:underline">
             About
           </Link>
-          <Link href="/" className="hover:underline">
+          <Link href="#services" className="hover:underline">
             Services
           </Link>
-          <Link href="/" className="hover:underline">
+          <Link href="#contact" className="hover:underline">
             Contact
           </Link>
         </div>
 
         {/* Mobile Menu Button */}
         <button
-          className="md:hidden p-2 focus:outline-none"
+          className="md:hidden focus:outline-none"
           onClick={() => setIsOpen(!isOpen)}
         >
           {isOpen ? <X size={28} /> : <Menu size={28} />}
         </button>
       </nav>
 
-      {/* Mobile Sidebar */}
       {/* Mobile Sidebar */}
       <div
         className={`fixed top-0 right-0 h-full w-64 bg-white shadow-2xl p-6 flex flex-col transition-transform transform ${
@@ -75,14 +72,14 @@ export default function Navbar() {
             About
           </Link>
           <Link
-            href="/"
+            href="#services"
             className="hover:underline"
             onClick={() => setIsOpen(false)}
           >
             Services
           </Link>
           <Link
-            href="/"
+            href="#contact"
             className="hover:underline"
             onClick={() => setIsOpen(false)}
           >

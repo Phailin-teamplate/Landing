@@ -1,29 +1,16 @@
 "use client";
 import { HiOutlineExternalLink } from "react-icons/hi";
 import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
-import { Textarea } from "@/components/ui/textarea";
 import { FaMapMarkerAlt, FaEnvelope, FaPhone } from "react-icons/fa";
-import { useState } from "react";
-import { ClipboardCopy } from "lucide-react";
 import { FaWhatsapp } from "react-icons/fa";
 
 export default function Contactus() {
   const googleMapsLink = "https://maps.app.goo.gl/SXU2vX1mmW5pdTGX9";
 
-  const whatsappNumber = "+85620 98270483"; // Replace with your WhatsApp number
   const whatsappLink = `https://wa.me/${2098270483}`;
-  const [copied, setCopied] = useState(false);
 
-  const handleCopy = () => {
-    const text = "contact@teamplate.dev";
-    navigator.clipboard.writeText(text).then(() => {
-      setCopied(true);
-      setTimeout(() => setCopied(false), 1500); // Reset after 1.5 seconds
-    });
-  };
   return (
-    <div className="flex flex-col items-center text-center mt-12 md:mt-16 px-0 md:px-0 w-full">
+    <div className="flex flex-col items-center text-center mt-12 md:mt-16 px-0 md:px-0 w-full " id="contact">
       <h2 className="text-3xl md:text-4xl font-bold text-black">
         Let's Stay Connected
       </h2>
@@ -36,32 +23,19 @@ export default function Contactus() {
         <div className="flex flex-col md:flex-row justify-center items-center w-full max-w-6xl gap-10">
           {/* Form Section */}
           <div className="w-full md:w-1/2">
-            <div className="grid grid-cols-2 gap-2 w-full">
-              <Input
-                type="text"
-                placeholder="Enter your Name"
-                className="w-full h-14 p-3 border rounded-lg shadow-sm"
-              />
-              <Input
-                type="email"
-                placeholder="Enter your Email"
-                className="w-full h-14 p-3 border rounded-lg shadow-sm"
-              />
-              <Input
-                type="text"
-                placeholder="Company (Optional)"
-                className="w-full h-14 p-3 border rounded-lg shadow-sm"
-              />
-              <Input
-                type="tel"
-                placeholder="Enter your Phone Number"
-                className="w-full h-14 p-3 border rounded-lg shadow-sm"
-              />
+            <div className="w-full h-70 rounded-xl overflow-hidden p-1 bg-gradient-to-r from-blue-500 to-indigo-600">
+              <div className="w-full h-full bg-white rounded-xl overflow-hidden">
+                <iframe
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3826.4319986231066!2d102.63702987505538!3d17.96181568360307!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x312466349451cc95%3A0x7b1e98b3a9ad6972!2sLao%20Youth%20Union%20-%20Cabinet%20office!5e0!3m2!1sen!2sus!4v1710757046698!5m2!1sen!2sus"
+                  width="100%"
+                  height="100%"
+                  style={{ border: "0" }}
+                  allowFullScreen
+                  loading="lazy"
+                  referrerPolicy="no-referrer-when-downgrade"
+                ></iframe>
+              </div>
             </div>
-            <Textarea
-              placeholder="Type your message here."
-              className="mt-6 w-full h-32 p-3 border rounded-lg shadow-sm"
-            />
           </div>
 
           {/* Contact Info Section */}
@@ -75,12 +49,12 @@ export default function Contactus() {
 
                   {/* Navigate Button */}
                   <a
-                    href={googleMapsLink}
+                    href="https://maps.app.goo.gl/SXU2vX1mmW5pdTGX9"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="text-white hover:text-gray-300"
                   >
-                    <HiOutlineExternalLink className="w-4 h-4" />
+                    <HiOutlineExternalLink className="w-5 h-5" />
                   </a>
                 </div>
               </div>
@@ -91,22 +65,14 @@ export default function Contactus() {
                 <h3 className="font-semibold text-lg">Email</h3>
                 <div className="flex items-center justify-between w-full">
                   <p className="text-sm">contact@teamplate.dev</p>
-                  {/* Copy Button with Tooltip */}
-                  <div className="relative">
-                    <button
-                      onClick={handleCopy}
-                      className="text-white hover:text-gray-300"
-                    >
-                      <ClipboardCopy className="w-4 h-4" />
-                    </button>
-
-                    {/* Small Alert Tooltip */}
-                    {copied && (
-                      <div className="absolute -top-7 left-1/2 transform -translate-x-1/2 bg-black text-white text-[10px] px-3 py-2 rounded-md shadow-lg">
-                        Copied!
-                      </div>
-                    )}
-                  </div>
+                  <a
+                    href="https://mail.google.com/mail/?view=cm&fs=1&to=contact@teamplate.dev"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-white hover:text-gray-300"
+                  >
+                    <HiOutlineExternalLink className="w-5 h-5" />
+                  </a>
                 </div>
               </div>
             </div>
@@ -117,7 +83,7 @@ export default function Contactus() {
                 <div className="flex items-center justify-between w-full">
                   <p className="text-sm">+85620 98270483</p>
                   <a
-                    href={whatsappLink}
+                    href={`https://wa.me/8562098270483`}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="text-white hover:text-gray-300"
@@ -134,13 +100,17 @@ export default function Contactus() {
       <p className="text-sm text-gray-500 mt-4 max-w-3xl">
         By clicking the contact us button, you agree to our{" "}
         <span className="text-blue-600 underline cursor-pointer">
-          terms and policy
+          terms and policy.
         </span>
-        .
       </p>
-      <Button className="mt-6 px-10 py-6 text-white bg-gradient-to-r from-blue-500 to-indigo-600 hover:bg-blue-700 rounded-lg shadow-md transition-all font-bold text-lg">
+      <Button className="mt-6 inline-flex i px-10 py-6 text-white bg-gradient-to-r from-blue-500 to-indigo-600 hover:bg-blue-700 rounded-lg shadow-md font-bold text-lg hover:scale-105 transition-transform">
         Contact Us
       </Button>
+      {/* <button className="mt-6 relative inline-flex items-center justify-center p-0.5 mb-2 me-2 overflow-hidden text-sm font-medium text-gray-900 rounded-lg group bg-gradient-to-br from-purple-600 to-blue-500 group-hover:from-purple-600 group-hover:to-blue-500 hover:text-white dark:text-white focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800">
+        <span className="relative px-5 py-2.5 transition-all ease-in duration-75 bg-white dark:bg-gray-900 rounded-md group-hover:bg-transparent group-hover:dark:bg-transparent">
+          Contact Us
+        </span>
+      </button> */}
     </div>
   );
 }
