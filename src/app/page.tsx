@@ -88,12 +88,7 @@ export default function Home() {
 
           {/* Image Section */}
           <div className="relative w-80 h-80 md:w-96 md:h-96">
-            <Image
-              src={StartUp}
-              alt="StartUp"
-              layout="fill"
-              objectFit="cover"
-            />
+            <Image src={StartUp} alt="StartUp" fill className="object-cover" />
           </div>
         </section>
 
@@ -111,7 +106,7 @@ export default function Home() {
             </p>
           </div>
           <div className="relative w-80 h-80 md:w-96 md:h-96 md:order-first">
-            <Image src={ITcs} alt="ITcs" layout="fill" objectFit="cover" />
+            <Image src={ITcs} alt="ITcs" fill className="object-cover" />
           </div>
         </section>
         <section className="flex flex-col md:flex-row items-center justify-center gap-10 md:gap-20 mt-16">
@@ -131,13 +126,16 @@ export default function Home() {
             <Image
               src={ITService}
               alt="ImaITServicege3"
-              layout="fill"
-              objectFit="cover"
+              fill
+              className="object-cover"
             />
           </div>
         </section>
 
-        <section id="services" className="text-center mt-16 md:scroll-mt-40 scroll-mt-25">
+        <section
+          id="services"
+          className="text-center mt-16 md:scroll-mt-40 scroll-mt-25"
+        >
           <h2 className="text-3xl md:text-5xl font-extrabold">
             What kind of business do we do?
           </h2>
