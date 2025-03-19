@@ -10,7 +10,7 @@ export default function Contactus() {
   const whatsappLink = `https://wa.me/${2098270483}`;
 
   return (
-    <div className="flex flex-col items-center text-center mt-12 md:mt-16 px-0 md:px-0 w-full " id="contact">
+    <div className="flex flex-col items-center text-center mt-12 md:mt-16 px-0 md:px-0 w-full scroll-mt-25 " id="contact">
       <h2 className="text-3xl md:text-4xl font-bold text-black">
         Let's Stay Connected
       </h2>
@@ -22,9 +22,8 @@ export default function Contactus() {
       <div className="flex flex-col items-center justify-center w-full p-6">
         <div className="flex flex-col md:flex-row justify-center items-center w-full max-w-6xl gap-10">
           {/* Form Section */}
-          <div className="w-full md:w-1/2">
-            <div className="w-full h-70 rounded-xl overflow-hidden p-1 bg-gradient-to-r from-blue-500 to-indigo-600">
-              <div className="w-full h-full bg-white rounded-xl overflow-hidden">
+          <div className="w-full h-70 md:w-1/2 shadow-md rounded-xl">
+              <div className="w-full h-full ">
                 <iframe
                   src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3826.4319986231066!2d102.63702987505538!3d17.96181568360307!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x312466349451cc95%3A0x7b1e98b3a9ad6972!2sLao%20Youth%20Union%20-%20Cabinet%20office!5e0!3m2!1sen!2sus!4v1710757046698!5m2!1sen!2sus"
                   width="100%"
@@ -34,7 +33,6 @@ export default function Contactus() {
                   loading="lazy"
                   referrerPolicy="no-referrer-when-downgrade"
                 ></iframe>
-              </div>
             </div>
           </div>
 
@@ -96,7 +94,6 @@ export default function Contactus() {
           </div>
         </div>
       </div>
-
       <p className="text-sm text-gray-500 mt-4 max-w-3xl">
         By clicking the contact us button, you agree to our{" "}
         <span className="text-blue-600 underline cursor-pointer">

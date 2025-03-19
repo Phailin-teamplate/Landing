@@ -11,7 +11,7 @@ export default function Footer() {
   return (
     <footer
       className={cn(
-        "bg-gray-400 text-white py-8 px-4"
+        "bg-gray-700 text-white py-8 px-4"
       )}
     >
       <div className="container mx-auto flex flex-col md:flex-row justify-between items-center md:items-center gap-8 md:gap-12">
