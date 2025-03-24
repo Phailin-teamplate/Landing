@@ -9,11 +9,7 @@ import {
 
 export default function Footer() {
   return (
-    <footer
-      className={cn(
-        "bg-gray-700 text-white py-8 px-4"
-      )}
-    >
+    <footer className={cn("bg-gray-700 text-white py-8 px-4")}>
       <div className="container mx-auto flex flex-col md:flex-row justify-between items-center md:items-center gap-8 md:gap-12">
         {/* Left Section */}
         <div className="text-center md:text-left flex flex-col items-center md:items-start gap-3">
@@ -26,33 +22,40 @@ export default function Footer() {
           <div className="flex gap-4">
             <a
               href="#"
-              className="text-white hover:text-primary transition-colors text-lg"
+              className="text-white hover:text-gray-400  transition-colors text-lg"
             >
               <FaFacebookF />
             </a>
             <a
               href="#"
-              className="text-white hover:text-primary transition-colors text-lg"
+              className="text-white hover:text-gray-400  transition-colors text-lg"
             >
               <FaInstagram />
             </a>
             <a
               href="#"
-              className="text-white hover:text-primary transition-colors text-lg"
+              className="text-white hover:text-gray-400  transition-colors text-lg"
             >
               <FaTiktok />
             </a>
+
             <a
-              href="#"
-              className="text-white hover:text-primary transition-colors text-lg"
+              href={`https://wa.me/8562098270483`}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-white hover:text-gray-400 transition-colors text-lg"
             >
               <FaWhatsapp />
             </a>
           </div>
         </div>
         <div className="flex flex-col gap-2 text-center md:text-left">
-          <h4 className="font-bold text-lg mb-2 cursor-pointer">Privacy Policy</h4>
-          <h4 className="font-bold text-lg mb-2 cursor-pointer">Terms of Service</h4>
+          <h4 className="font-bold text-lg mb-2 cursor-pointer">
+            Privacy Policy
+          </h4>
+          <h4 className="font-bold text-lg mb-2 cursor-pointer">
+            Terms of Service
+          </h4>
         </div>
       </div>
     </footer>

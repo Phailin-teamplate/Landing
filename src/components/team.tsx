@@ -31,7 +31,7 @@ export default function Teams() {
       <div className="flex flex-col">
         {/* Top image */}
         <div className="flex flex-col items-center justify-center mb-8">
-          <div className="relative w-[350px] h-[350px]"> /* Fixed size wrapper */
+          <div className="relative w-[350px] h-[350px]"> 
             <Image
               src={teamMembers[0].image}
               alt={teamMembers[0].name}

@@ -10,6 +10,13 @@ import Icon6 from "@/public/icon_6.svg";
 import StartUp from "@/public/Start.gif";
 import ITcs from "@/public/Animated IT.gif";
 import ITService from "@/public/Animated IT Service.gif";
+import Mockupbg from "@/public/Mockup bg.jpg";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Teamplate",
+  description: "Teamplate of laos",
+};
 
 const features = [
   {
@@ -53,14 +60,21 @@ export default function Home() {
   return (
     <div className="flex flex-col ">
       <div className="flex justify-center ">
-        <div className="relative w-full h-[500px] xs:h-[600px] md:h-[650px] lg:h-[700px] bg-gradient-to-b from-blue-400 to-blue-700">
-          <div className="absolute top-[50%] left-[50%]  -translate-x-1/2 -translate-y-1/2 text-center flex flex-col items-center justify-center">
+        <div className="relative w-full h-[500px] xs:h-[600px] md:h-[650px] lg:h-[700px]">
+          {/* Background Image */}
+          <Image src={Mockupbg} alt="StartUp" fill className="object-cover" />
+
+          {/* Blue Overlay */}
+          <div className="absolute inset-0 bg-gradient-to-b from-blue-400/50 to-blue-700/70"></div>
+
+          {/* Text Content */}
+          <div className="absolute top-[50%] left-[50%] -translate-x-1/2 -translate-y-1/2 text-center flex flex-col items-center justify-center z-10">
             <div className="text-xs xs:text-3xl md:text-2xl mb-2 xs:mb-12 md:mb-2">
               <span className="text-white">
                 From IT outsourcing development to IT business consulting
               </span>
             </div>
-            <div className="text-white text-6xl sm:text-6xl md:text-9xl font-bold ">
+            <div className="text-white text-6xl sm:text-6xl md:text-9xl font-bold">
               TEAMPLATE
             </div>
           </div>
