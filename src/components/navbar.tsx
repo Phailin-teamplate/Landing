@@ -44,7 +44,7 @@ export default function Navbar() {
             onClick={() => handleSmoothScroll("#about")}
             className="hover:underline"
           >
-            About
+            About  About
           </button>
           <button
             onClick={() => handleSmoothScroll("#services")}
