@@ -26,7 +26,15 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   const [isVisible, setIsVisible] = useState(false);
+  const [isLoading, setIsLoading] = useState(true); // ✅ added
 
+  // Show loading for initial render (simulate with timeout)
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setIsLoading(false);
+    }, 500); // Optional: adjust timing
+    return () => clearTimeout(timer);
+  }, []);
   // Detect scroll position and show button when scrolling down
   const handleScroll = () => {
     if (window.scrollY > 300) {
@@ -52,6 +60,12 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} ${inter.className}  ${notoSansLao.className} antialiased`}
       >
+         {isLoading ? (
+          <div className="fixed inset-0 z-50 flex items-center justify-center bg-white dark:bg-black">
+            <div className="w-12 h-12 border-4 border-gray-300 border-t-black rounded-full animate-spin"></div>
+          </div>
+        ) : (
+          <>
         <Navbar />
         {children}
         <Footer />
@@ -66,6 +80,8 @@ export default function RootLayout({
              <ArrowUpIcon className="h-5 w-5 md:h-6 md:w-6" />
            </button>
         )}
+        </>
+      )}
       </body>
     </html>
   );
