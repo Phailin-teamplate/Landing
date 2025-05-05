@@ -1,7 +1,7 @@
 import { useState, useCallback } from "react";
 import Image from "next/image";
 import { Menu, X } from "lucide-react";
-import Logo from "@/public/TEAMPLATE.png";
+import Logo from "../../public/TEAMPLATE.png";
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
